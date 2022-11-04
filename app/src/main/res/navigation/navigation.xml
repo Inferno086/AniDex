@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigation"
+    app:startDestination="@id/homeFragment">
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="com.inferno.anidex.HomeFragment"
+        android:label="HomeFragment" >
+        <action
+            android:id="@+id/action_homeFragment_to_characterFragment"
+            app:destination="@id/characterFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_listFragment"
+            app:destination="@id/listFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/characterFragment"
+        android:name="com.inferno.anidex.CharacterFragment"
+        android:label="CharacterFragment" />
+    <fragment
+        android:id="@+id/listFragment"
+        android:name="com.inferno.anidex.ListFragment"
+        android:label="ListFragment" >
+        <action
+            android:id="@+id/action_listFragment_to_altCharacterFragment"
+            app:destination="@id/altCharacterFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/altCharacterFragment"
+        android:name="com.inferno.anidex.AltCharacterFragment"
+        android:label="AltCharacterFragment" >
+        <argument
+            android:name="charName"
+            app:argType="string"
+            android:defaultValue="Naruto Uzumaki" />
+        <argument android:name="charDescription"
+            app:argType="string"
+            android:defaultValue="description" />
+        <argument
+            android:name="charImageID"
+            app:argType="integer"
+            android:defaultValue="0" />
+    </fragment>
+</navigation>

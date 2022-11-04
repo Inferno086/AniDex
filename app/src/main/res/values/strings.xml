@@ -1,0 +1,121 @@
+<resources>
+    <string name="app_name">AniDex</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="welcome_to_anidex">Welcome To AniDex</string>
+    <string name="start">Start</string>
+    <string name="large_text">
+        "Material is the metaphor.\n\n"
+
+        "A material metaphor is the unifying theory of a rationalized space and a system of motion."
+        "The material is grounded in tactile reality, inspired by the study of paper and ink, yet "
+        "technologically advanced and open to imagination and magic.\n"
+        "Surfaces and edges of the material provide visual cues that are grounded in reality. The "
+        "use of familiar tactile attributes helps users quickly understand affordances. Yet the "
+        "flexibility of the material creates new affordances that supercede those in the physical "
+        "world, without breaking the rules of physics.\n"
+        "The fundamentals of light, surface, and movement are key to conveying how objects move, "
+        "interact, and exist in space and in relation to each other. Realistic lighting shows "
+        "seams, divides space, and indicates moving parts.\n\n"
+
+        "Bold, graphic, intentional.\n\n"
+
+        "The foundational elements of print based design typography, grids, space, scale, color, "
+        "and use of imagery guide visual treatments. These elements do far more than please the "
+        "eye. They create hierarchy, meaning, and focus. Deliberate color choices, edge to edge "
+        "imagery, large scale typography, and intentional white space create a bold and graphic "
+        "interface that immerse the user in the experience.\n"
+        "An emphasis on user actions makes core functionality immediately apparent and provides "
+        "waypoints for the user.\n\n"
+
+        "Motion provides meaning.\n\n"
+
+        "Motion respects and reinforces the user as the prime mover. Primary user actions are "
+        "inflection points that initiate motion, transforming the whole design.\n"
+        "All action takes place in a single environment. Objects are presented to the user without "
+        "breaking the continuity of experience even as they transform and reorganize.\n"
+        "Motion is meaningful and appropriate, serving to focus attention and maintain continuity. "
+        "Feedback is subtle yet clear. Transitions are efﬁcient yet coherent.\n\n"
+
+        "3D world.\n\n"
+
+        "The material environment is a 3D space, which means all objects have x, y, and z "
+        "dimensions. The z-axis is perpendicularly aligned to the plane of the display, with the "
+        "positive z-axis extending towards the viewer. Every sheet of material occupies a single "
+        "position along the z-axis and has a standard 1dp thickness.\n"
+        "On the web, the z-axis is used for layering and not for perspective. The 3D world is "
+        "emulated by manipulating the y-axis.\n\n"
+
+        "Light and shadow.\n\n"
+
+        "Within the material environment, virtual lights illuminate the scene. Key lights create "
+        "directional shadows, while ambient light creates soft shadows from all angles.\n"
+        "Shadows in the material environment are cast by these two light sources. In Android "
+        "development, shadows occur when light sources are blocked by sheets of material at "
+        "various positions along the z-axis. On the web, shadows are depicted by manipulating the "
+        "y-axis only. The following example shows the card with a height of 6dp.\n\n"
+
+        "Resting elevation.\n\n"
+
+        "All material objects, regardless of size, have a resting elevation, or default elevation "
+        "that does not change. If an object changes elevation, it should return to its resting "
+        "elevation as soon as possible.\n\n"
+
+        "Component elevations.\n\n"
+
+        "The resting elevation for a component type is consistent across apps (e.g., FAB elevation "
+        "does not vary from 6dp in one app to 16dp in another app).\n"
+        "Components may have different resting elevations across platforms, depending on the depth "
+        "of the environment (e.g., TV has a greater depth than mobile or desktop).\n\n"
+
+        "Responsive elevation and dynamic elevation offsets.\n\n"
+
+        "Some component types have responsive elevation, meaning they change elevation in response "
+        "to user input (e.g., normal, focused, and pressed) or system events. These elevation "
+        "changes are consistently implemented using dynamic elevation offsets.\n"
+        "Dynamic elevation offsets are the goal elevation that a component moves towards, relative "
+        "to the component’s resting state. They ensure that elevation changes are consistent "
+        "across actions and component types. For example, all components that lift on press have "
+        "the same elevation change relative to their resting elevation.\n"
+        "Once the input event is completed or cancelled, the component will return to its resting "
+        "elevation.\n\n"
+
+        "Avoiding elevation interference.\n\n"
+
+        "Components with responsive elevations may encounter other components as they move between "
+        "their resting elevations and dynamic elevation offsets. Because material cannot pass "
+        "through other material, components avoid interfering with one another any number of ways, "
+        "whether on a per component basis or using the entire app layout.\n"
+        "On a component level, components can move or be removed before they cause interference. "
+        "For example, a floating action button (FAB) can disappear or move off screen before a "
+        "user picks up a card, or it can move if a snackbar appears.\n"
+        "On the layout level, design your app layout to minimize opportunities for interference. "
+        "For example, position the FAB to one side of stream of a cards so the FAB won’t interfere "
+        "when a user tries to pick up one of cards.\n\n"
+    </string>
+
+    <string name="naruto">Naruto Uzumaki</string>
+    <string name="shinichi">Shinichi Izumi</string>
+    <string name="onizuka">Eikichi Onizuka</string>
+    <string name="onizuka_description">Introduction : \n
+Eikichi Onizuka is the main protagonist of the Great Teacher Onizuka (GTO) series. Together with his best friend, Ryuji Danma, they were once known as the Oni-Baku: Shonan\'s strongest fighting duo. He decided to become a teacher after helping a troubled JK for good. In the original manga and anime, Onizuka is a 22-year-old bachelor and teacher at Holy Forest Academy. There, he is the homeroom teacher of the troublesome Class 3-4. He teaches social studies, but is renowned throughout the school for teaching life lessons to his students.\n\n
+Personality : \n
+Onizuka is a very presumptuous and vulgar guy that it often leads him into trouble. Although he is very hormonal when it comes to girls, he is still a virgin and seems to be unable to get a girlfriend. He likes sexy women to the point of even sexually tempting Nagisa Nagase (Ryuji Danma\'s girlfriend) without caring that his friend was right behind him. He is often referred to as a pervert and has a fetish with smelling young ladies fresh panties in their drawers. Onizuka is also unashamed of the state of untidiness of his home and the fact that many porn magazines lie around his house.\n\n
+Onizuka\'s behavior is akin to that of a child. After finding out that Hajime Fukuroda has a secret longing for the academy\'s students, he made him into one of his pranks main targets, which consists of hitting him with water rockets.\n\n
+Despite all this, Onizuka can be very serious when the moment asks for it. To solve problems, he will surely take the most weird and unexpected (and often the hardest) route, but also the most epic. Depending on your point of view, he could be considered a fool or a genius. He never stops surprising the people around him with his behavior, actions, and decisions, except for Ryuji, who has known him for a very long time. Despite this, the school\'s principal, Ryoko Sakurai, deeply trusts him.\n\n
+As for being a teacher, Onizuka is very eccentric, be it his methods of teaching or the way he dresses.\n\n
+Onizuka loves eating, in particular sushi. On one occasion, he purchased three orders of Otoro (fatty tuna) and even asking for a Sushi Boat. However, he didn\'t have enough money to pay for it and ran away.\n\n
+History : \n
+Growing up in Shonan where gang activities were common, Onizuka is a retired veteran member with great admiration in his hometown. According to Ryuji and himself, they were already delinquents back in their teenage years, with Onizuka fallen due to poor parenting and his father\'s absence. He was already involved in various crimes such as illegal races, fighting, and vandalism at the same ages of his own students. The duo have become nothing but eyesores to their teacher and were mistreated at best, making Onizuka and Ryuji mark their own teacher as the worst teacher and believe a dream teacher should put caring for their students as priority.\n\n
+Onizuka attended Eurasia College and managed to pass only by cheating. He was captain of the karate team, and his major was Sociology.\n\n
+The miracles he produces throughout the whole series display his great strength, character, and ability to help his students solve their problems: earning their friendship with perseverance, determination, and hard work.
+    </string>
+    <string name="naruto_description">Naruto is a boisterous and exuberant boy. He would end sentences with \"Dattebayo!\" when excited or frustrated. He has a number of childish traits, such as being a very picky eater (he almost exclusively eats ramen), being afraid of ghosts, and carries a chubby green-frog wallet which he calls \"Gama-chan\". Naruto is heedless to formality or social standings and has a habit of giving people he meets nicknames or addressing them without appropriate honourifics, as shown when he opted to call the Second Hokage a name he thought of off the top of his head instead of simply \"Lord Second\".\n\n
+
+He can also be quite perverted, creating different forms of his Sexy Technique and once tried to sneak a peek in the women\'s bath when the opportunity presented itself. Despite these, plus other quirks and the great amounts of criticism that follows them, Naruto is said to have a personality that brings people to him, inspiring friendship, loyalty and love from most of the people he meets through acts of genuine kindness and sincerity that could change a person\'s entire world view.</string>
+
+    <string name="shinichi_discription">Shinichi Izumi is the main protagonist of the Parasyte series. He is a high school student whose right arm was infected with a parasite named Migi. Initially, Shinichi is a thoughtful and nice person who cares a great deal for those around him. However, he is also considered a bit of a pushover and a wimp, due to his awkwardness and paralyzing fear of bugs. All of that starts to change after being formally introduced to and acquainted with Migi, though he is understandably horrified at first. Shinichi then becomes more aware of his surroundings and excels in sports like basketball. He also overcomes his fear of bugs, due to Parasites being much scarier, much to the confusion of his mother.\n\n
+After Nobuko Izumi\'s (Shinichi\'s mother) death and his subsequent rebuild by Migi, Shinichi gains significant resolve and resilience and is willing to risk his own life to protect his friends, family, and the public from harm. He becomes very calm and cool-headed, taking horrific events in stride without so much as flinching, a sharp contrast to his former awkward, timid self. His father even asks him outright if he\'s made of steel. However, he is not immune to anger, as he also shows a very vengeful side when he attempts to track down and kill the Parasite who killed his mother and took over her body, saying that the thought of such a being walking around freely makes his blood boil.\n\n
+    However, as a side-effect of fusing with Migi, Shinichi becomes somewhat distant and unsympathetic. His bond with Migi becomes stronger and he occasionally begins to think like a parasite, as how he described a dead dog\'s body as \'a lump of dog-shaped meat\' (Migi even notes that that sounds exactly like something he would say). This change in his behavior starts to worry those around him, especially Satomi Murano, who often wonders if it\'s really he, or someone else entirely. This is made worse by the fact that Migi often threatens to kill anyone who finds out about him, and so he is unable to tell people the truth about what has happened to him.</string>
+
+</resources>

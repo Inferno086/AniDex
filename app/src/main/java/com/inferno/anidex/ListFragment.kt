@@ -46,6 +46,8 @@ class ListFragment : Fragment() {
                 narutoTextView,
                 shinichiTextView,
                 onizukaTextView,
+                josephjoestarTextView,
+                gutsTextView,
             )
         }
 
@@ -58,13 +60,15 @@ class ListFragment : Fragment() {
 
     private fun navigateToAltCharacterFragment(view: View?) {
         when((view as TextView).text) {
-            "Eikichi Onizuka" -> setCharPropertiesToNavigate(view, "Eikichi Onizuka", R.string.onizuka_description, R.drawable.onizuka)
-            "Naruto Uzumaki" -> setCharPropertiesToNavigate(view, "Naruto Uzumaki", R.string.naruto_description, R.drawable.naruto)
-            "Shinichi Izumi" -> setCharPropertiesToNavigate(view, "Shinichi Izumi", R.string.shinichi_discription, R.drawable.shinichi)
+            "Eikichi Onizuka" -> setCharPropertiesToNavigate(view, R.string.onizuka, R.string.onizuka_description, R.drawable.onizuka)
+            "Naruto Uzumaki" -> setCharPropertiesToNavigate(view, R.string.naruto, R.string.naruto_description, R.drawable.naruto)
+            "Shinichi Izumi" -> setCharPropertiesToNavigate(view, R.string.shinichi, R.string.shinichi_description, R.drawable.shinichi)
+            "Joseph Joestar" -> setCharPropertiesToNavigate(view, R.string.joseph_joestar, R.string.josephjoestar_description, R.drawable.josephjoestar)
+            "Guts" -> setCharPropertiesToNavigate(view, R.string.guts, R.string.guts_description, R.drawable.guts)
         }
     }
 
-    private fun setCharPropertiesToNavigate(view : TextView, name : String, descriptionID : Int, imageID : Int) {
-        view.findNavController().navigate(ListFragmentDirections.actionListFragmentToAltCharacterFragment(charName = name, charDescription = getString(descriptionID), charImageID = imageID))
+    private fun setCharPropertiesToNavigate(view : TextView, name : Int, descriptionID : Int, imageID : Int) {
+        view.findNavController().navigate(ListFragmentDirections.actionListFragmentToAltCharacterFragment(charName = getString(name), charDescription = getString(descriptionID), charImageID = imageID))
     }
 }

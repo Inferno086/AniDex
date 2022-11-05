@@ -10,7 +10,7 @@ import kotlin.random.Random
 class CharacterFragment : Fragment(R.layout.fragment_character) {
 
     lateinit var binding : FragmentCharacterBinding
-    val totalCharacters : Int = 3
+    val totalCharacters : Int = 5
 
     // I added onCreate() as well just for the animations
     // I dont know if it can be done in onViewCreated()
@@ -28,8 +28,10 @@ class CharacterFragment : Fragment(R.layout.fragment_character) {
         // List of Characters
         val characters = listOf<Character>(
             Character("Eikichi Onizuka", getString(R.string.onizuka_description), R.drawable.onizuka),
+            Character("Guts", getString(R.string.guts_description), R.drawable.guts),
+            Character("Joseph Joestar", getString(R.string.josephjoestar_description), R.drawable.josephjoestar),
             Character("Naruto Uzumaki", getString(R.string.naruto_description), R.drawable.naruto),
-            Character(name = "Shinichi Izumi", getString(R.string.shinichi_discription), R.drawable.shinichi)
+            Character(name = "Shinichi Izumi", getString(R.string.shinichi_description), R.drawable.shinichi),
         )
 
         displayRandomCharacterFromList(characters, totalCharacters) // For the first time

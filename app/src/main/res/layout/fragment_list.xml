@@ -25,6 +25,20 @@
                 android:text="@string/onizuka" />
 
             <TextView
+                android:id="@+id/gutsTextView"
+                style="@style/TextViewStyle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/guts" />
+
+            <TextView
+                android:id="@+id/josephjoestarTextView"
+                style="@style/TextViewStyle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/joseph_joestar" />
+
+            <TextView
                 android:id="@+id/narutoTextView"
                 style="@style/TextViewStyle"
                 android:text="@string/naruto" />
@@ -35,6 +49,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="@string/shinichi" />
+
         </LinearLayout>
     </ScrollView>
 </layout>

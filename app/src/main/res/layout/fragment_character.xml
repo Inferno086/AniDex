@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
-<layout xmlns:tools="http://schemas.android.com/tools"
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:android="http://schemas.android.com/apk/res/android">
+    xmlns:tools="http://schemas.android.com/tools">
 
     <data>
 
@@ -22,10 +22,10 @@
                 android:id="@+id/characterImage"
                 android:layout_width="402dp"
                 android:layout_height="406dp"
+                android:layout_gravity="center_horizontal"
                 android:adjustViewBounds="true"
                 android:scaleType="centerInside"
-                app:srcCompat="@drawable/naruto"
-                android:layout_gravity="center_horizontal"/>
+                app:srcCompat="@drawable/naruto" />
 
             <TextView
                 android:id="@+id/characterName"

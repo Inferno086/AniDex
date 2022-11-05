@@ -1,6 +1,7 @@
 package com.inferno.anidex
 
 import android.os.Bundle
+import android.transition.TransitionInflater
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -14,6 +15,15 @@ import com.inferno.anidex.databinding.FragmentListBinding
 class ListFragment : Fragment() {
 
     lateinit var binding : FragmentListBinding
+
+    // I added onCreate() as well just for the animations
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+
+        // For enter animations
+        val inflater = androidx.transition.TransitionInflater.from(requireContext())
+        enterTransition = inflater.inflateTransition(R.transition.slide_right)
+    }
 
     override fun onCreateView(
         inflater: LayoutInflater,

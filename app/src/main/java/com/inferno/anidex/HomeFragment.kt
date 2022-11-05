@@ -13,6 +13,15 @@ class HomeFragment : Fragment() {
 
     lateinit var binding : FragmentHomeBinding
 
+    // I added onCreate() as well just for the animations
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+
+        // For enter animations
+        val inflater = androidx.transition.TransitionInflater.from(requireContext())
+        enterTransition = inflater.inflateTransition(R.transition.slide_right)
+    }
+
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,

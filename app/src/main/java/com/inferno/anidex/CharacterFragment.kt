@@ -12,6 +12,16 @@ class CharacterFragment : Fragment(R.layout.fragment_character) {
     lateinit var binding : FragmentCharacterBinding
     val totalCharacters : Int = 3
 
+    // I added onCreate() as well just for the animations
+    // I dont know if it can be done in onViewCreated()
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+
+        // For enter animations
+        val inflater = androidx.transition.TransitionInflater.from(requireContext())
+        enterTransition = inflater.inflateTransition(R.transition.slide_right)
+    }
+
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         binding = FragmentCharacterBinding.bind(view)  //Alternate way to bind a fragment
 

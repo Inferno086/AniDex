@@ -1,5 +1,6 @@
 package com.inferno.anidex
 
+import android.content.Intent
 import android.os.Bundle
 import android.view.Menu
 import android.view.MenuInflater
@@ -31,10 +32,6 @@ class CharacterFragment : Fragment(R.layout.fragment_character) {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         binding = FragmentCharacterBinding.bind(view)  //Alternate way to bind a fragment
 
-        // For share button
-        val menuHost : MenuHost = requireActivity()
-        shareButtonInflater(menuHost)
-
         // List of Characters
         val characters = listOf<Character>(
             Character("Eikichi Onizuka", getString(R.string.onizuka_description), R.drawable.onizuka),
@@ -50,6 +47,10 @@ class CharacterFragment : Fragment(R.layout.fragment_character) {
         binding.characterImage.setOnClickListener { view ->
             displayRandomCharacterFromList(characters, totalCharacters)
         }
+
+        // For share button
+        val menuHost : MenuHost = requireActivity()
+        shareButtonInflater(menuHost)
     }
 
     // This function updates the character displayed when called
@@ -78,6 +79,17 @@ class CharacterFragment : Fragment(R.layout.fragment_character) {
             }
 
             override fun onMenuItemSelected(menuItem: MenuItem): Boolean {
+                // For sharing the Text in description
+                val sendIntent : Intent = Intent().apply {
+                    val charDescrip : String = binding.characterName.text.toString() + "\n\n" +
+                                                 binding.characterDescription.text.toString()
+                    type = "text/plain"
+                    action = Intent.ACTION_SEND
+                    putExtra(Intent.EXTRA_TEXT, charDescrip)
+                }
+
+                val shareIntent = Intent.createChooser(sendIntent, null)
+                startActivity(shareIntent)
                 return true
             }
         }, viewLifecycleOwner, Lifecycle.State.RESUMED )

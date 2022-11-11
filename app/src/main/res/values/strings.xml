@@ -145,5 +145,7 @@ Even if you force back what was lost, it still won\'t be the way it was.\n
     <string name="previous">Prev</string>
     <string name="share">Share</string>
     <string name="list">List</string>
+    <string name="about">About</string>
+    <string name="more">More</string>
 
 </resources>

@@ -13,14 +13,15 @@
 
         <TextView
             android:id="@+id/titleText"
+            style="@style/TextStyle"
+            android:paddingBottom="10dp"
             android:text="@string/welcome_to_anidex"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.497"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/titleImage"
-            app:layout_constraintVertical_bias="0.185"
-            style="@style/TextStyle" />
+            app:layout_constraintVertical_bias="0.076" />
 
         <ImageView
             android:id="@+id/titleImage"
@@ -33,26 +34,60 @@
 
         <Button
             android:id="@+id/startButton"
+            style="@style/ButtonStyle"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:backgroundTint="@android:color/holo_orange_dark"
             android:text="@string/start"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.498"
+            app:layout_constraintBottom_toTopOf="@+id/listButton"
+            app:layout_constraintEnd_toStartOf="@+id/aboutButton"
+            app:layout_constraintHorizontal_bias="0.5"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/titleText"
-            app:layout_constraintVertical_bias="0.245"
-            style="@style/ButtonStyle" />
+            app:layout_constraintTop_toBottomOf="@+id/titleText" />
 
         <Button
             android:id="@+id/listButton"
             style="@style/ButtonStyle"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:backgroundTint="@android:color/holo_orange_light"
             android:text="List"
             app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/moreButton"
+            app:layout_constraintHorizontal_bias="0.5"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/startButton"
-            app:layout_constraintVertical_bias="0.278" />
+            app:layout_constraintTop_toBottomOf="@+id/startButton" />
+
+        <Button
+            android:id="@+id/aboutButton"
+            style="@style/ButtonStyle"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:backgroundTint="@android:color/holo_orange_light"
+            android:paddingTop="0dp"
+            android:paddingBottom="0dp"
+            android:text="@string/about"
+            app:iconPadding="8dp"
+            app:layout_constraintBottom_toTopOf="@+id/moreButton"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/startButton"
+            app:layout_constraintTop_toBottomOf="@+id/titleText" />
+
+        <Button
+            android:id="@+id/moreButton"
+            style="@style/ButtonStyle"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:backgroundTint="@android:color/holo_orange_dark"
+            android:paddingTop="0dp"
+            android:paddingBottom="0dp"
+            android:text="@string/more"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/listButton"
+            app:layout_constraintTop_toBottomOf="@+id/aboutButton" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>

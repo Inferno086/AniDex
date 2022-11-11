@@ -42,6 +42,11 @@ class HomeFragment : Fragment() {
             view.findNavController().navigate(HomeFragmentDirections.actionHomeFragmentToListFragment())
         }
 
+        // onClickListener for aboutButton
+        binding.aboutButton.setOnClickListener { view ->
+            view.findNavController().navigate(HomeFragmentDirections.actionHomeFragmentToAboutFragment())
+        }
+
         // Adding the options menu in HomeFragment
         val menuHost : MenuHost = requireActivity()
 

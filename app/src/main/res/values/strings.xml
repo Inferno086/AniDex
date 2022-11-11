@@ -147,5 +147,7 @@ Even if you force back what was lost, it still won\'t be the way it was.\n
     <string name="list">List</string>
     <string name="about">About</string>
     <string name="more">More</string>
+    <string name="aboutApp">AniDex is used to display some of my favorite anime and manga characters. The Start button displays a random character and when the image is clicked, a new random character is displayed. List displays all the characters present in the app. </string>
+    <string name="creator">- Arjun Shukla (Inferno)</string>
 
 </resources>

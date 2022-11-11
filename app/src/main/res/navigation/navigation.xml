@@ -14,6 +14,9 @@
         <action
             android:id="@+id/action_homeFragment_to_listFragment"
             app:destination="@id/listFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_aboutFragment"
+            app:destination="@id/aboutFragment" />
     </fragment>
     <fragment
         android:id="@+id/characterFragment"
@@ -43,4 +46,8 @@
             app:argType="integer"
             android:defaultValue="0" />
     </fragment>
+    <fragment
+        android:id="@+id/aboutFragment"
+        android:name="com.inferno.anidex.AboutFragment"
+        android:label="AboutFragment" />
 </navigation>

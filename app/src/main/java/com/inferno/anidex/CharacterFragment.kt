@@ -80,16 +80,21 @@ class CharacterFragment : Fragment(R.layout.fragment_character) {
 
             override fun onMenuItemSelected(menuItem: MenuItem): Boolean {
                 // For sharing the Text in description
-                val sendIntent : Intent = Intent().apply {
-                    val charDescrip : String = binding.characterName.text.toString() + "\n\n" +
-                                                 binding.characterDescription.text.toString()
-                    type = "text/plain"
-                    action = Intent.ACTION_SEND
-                    putExtra(Intent.EXTRA_TEXT, charDescrip)
-                }
+                when(menuItem.itemId) {
+                    R.id.share -> {
+                            val sendIntent : Intent = Intent().apply {
+                                val charDescrip: String =
+                                    binding.characterName.text.toString() + "\n\n" +
+                                            binding.characterDescription.text.toString()
+                                type = "text/plain"
+                                action = Intent.ACTION_SEND
+                                putExtra(Intent.EXTRA_TEXT, charDescrip)
+                            }
 
-                val shareIntent = Intent.createChooser(sendIntent, null)
-                startActivity(shareIntent)
+                            val shareIntent = Intent.createChooser(sendIntent, null)
+                            startActivity(shareIntent)
+                        }
+                }
                 return true
             }
         }, viewLifecycleOwner, Lifecycle.State.RESUMED )

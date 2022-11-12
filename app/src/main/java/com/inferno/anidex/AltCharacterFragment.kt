@@ -49,16 +49,24 @@ class AltCharacterFragment : Fragment(R.layout.fragment_alt_character) {
 
             override fun onMenuItemSelected(menuItem: MenuItem): Boolean {
 
-                val sendIntent : Intent = Intent().apply {
-                    val charDes : String = binding.characterName.text.toString() + "\n\n" +
-                            binding.characterDescription.text.toString()
-                    type = "text/plain"
-                    action = Intent.ACTION_SEND
-                    putExtra(Intent.EXTRA_TEXT, charDes)
-                }
+                when(menuItem.itemId) {
+                    R.id.share -> {
+                        val sendIntent: Intent = Intent().apply {
+                            val charDes: String = binding.characterName.text.toString() + "\n\n" +
+                                    binding.characterDescription.text.toString()
+                            type = "text/plain"
+                            action = Intent.ACTION_SEND
+                            putExtra(Intent.EXTRA_TEXT, charDes)
+                        }
 
-                val shareIntent = Intent.createChooser(sendIntent, null)
-                startActivity(shareIntent)
+                        val shareIntent = Intent.createChooser(sendIntent, null)
+                        startActivity(shareIntent)
+                    }
+
+                    android.R.id.home -> {
+                        requireActivity().onBackPressed()
+                    }
+                }
                 return true
             }
         }, viewLifecycleOwner, Lifecycle.State.RESUMED)

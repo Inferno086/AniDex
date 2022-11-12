@@ -7,7 +7,7 @@
     <fragment
         android:id="@+id/homeFragment"
         android:name="com.inferno.anidex.HomeFragment"
-        android:label="HomeFragment" >
+        android:label="AniDex" >
         <action
             android:id="@+id/action_homeFragment_to_characterFragment"
             app:destination="@id/characterFragment" />
@@ -21,11 +21,11 @@
     <fragment
         android:id="@+id/characterFragment"
         android:name="com.inferno.anidex.CharacterFragment"
-        android:label="CharacterFragment" />
+        android:label="Character" />
     <fragment
         android:id="@+id/listFragment"
         android:name="com.inferno.anidex.ListFragment"
-        android:label="ListFragment" >
+        android:label="List of Characters" >
         <action
             android:id="@+id/action_listFragment_to_altCharacterFragment"
             app:destination="@id/altCharacterFragment" />
@@ -33,7 +33,7 @@
     <fragment
         android:id="@+id/altCharacterFragment"
         android:name="com.inferno.anidex.AltCharacterFragment"
-        android:label="AltCharacterFragment" >
+        android:label="Character" >
         <argument
             android:name="charName"
             app:argType="string"
@@ -49,5 +49,5 @@
     <fragment
         android:id="@+id/aboutFragment"
         android:name="com.inferno.anidex.AboutFragment"
-        android:label="AboutFragment" />
+        android:label="About" />
 </navigation>

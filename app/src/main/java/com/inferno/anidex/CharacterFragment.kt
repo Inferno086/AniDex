@@ -6,7 +6,6 @@ import android.view.Menu
 import android.view.MenuInflater
 import android.view.MenuItem
 import android.view.View
-import android.widget.Button
 import androidx.core.view.MenuHost
 import androidx.core.view.MenuProvider
 import androidx.fragment.app.Fragment
@@ -44,7 +43,7 @@ class CharacterFragment : Fragment(R.layout.fragment_character) {
         displayRandomCharacterFromList(characters, totalCharacters) // For the first time
 
         //onClickListener for the image
-        binding.characterImage.setOnClickListener { view ->
+        binding.characterImage.setOnClickListener {
             displayRandomCharacterFromList(characters, totalCharacters)
         }
 
@@ -67,7 +66,7 @@ class CharacterFragment : Fragment(R.layout.fragment_character) {
         updateCharacter(list[randomNumber])
     }
 
-    // This function is for inflating the share button
+    // This function is for inflating the share button and back button
     // This can be done directly in onViewCreated() as well
     // It has been done for simplicity in onViewCreated()
     // setHasOptionsMenu(true) has been deprecated and this is the replacement
@@ -79,8 +78,9 @@ class CharacterFragment : Fragment(R.layout.fragment_character) {
             }
 
             override fun onMenuItemSelected(menuItem: MenuItem): Boolean {
-                // For sharing the Text in description
+
                 when(menuItem.itemId) {
+                    // For sharing the Text in description
                     R.id.share -> {
                         val sendIntent : Intent = Intent().apply {
                             val charDescrip: String =
@@ -93,6 +93,12 @@ class CharacterFragment : Fragment(R.layout.fragment_character) {
 
                         val shareIntent = Intent.createChooser(sendIntent, null)
                         startActivity(shareIntent)
+                    }
+
+                    android.R.id.home -> {
+                        // I used requireActivity()
+                        // Because onBackPressed() does not work in fragments directly
+                        requireActivity().onBackPressed()
                     }
                 }
                 return true

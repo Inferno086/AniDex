@@ -1,16 +1,21 @@
 package com.inferno.anidex
 
 import android.content.Intent
+import android.graphics.Bitmap
+import android.net.Uri
 import android.os.Bundle
+import android.provider.MediaStore
 import android.view.Menu
 import android.view.MenuInflater
 import android.view.MenuItem
 import android.view.View
+import androidx.core.graphics.drawable.toBitmap
 import androidx.core.view.MenuHost
 import androidx.core.view.MenuProvider
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.Lifecycle
 import com.inferno.anidex.databinding.FragmentCharacterBinding
+import java.io.ByteArrayOutputStream
 import kotlin.random.Random
 
 class CharacterFragment : Fragment(R.layout.fragment_character) {
@@ -80,17 +85,36 @@ class CharacterFragment : Fragment(R.layout.fragment_character) {
             override fun onMenuItemSelected(menuItem: MenuItem): Boolean {
 
                 when(menuItem.itemId) {
-                    // For sharing the Text in description
+                    // For sharing the Text in description and the Image
                     R.id.share -> {
+                        // sendIntent is what we want to share
                         val sendIntent : Intent = Intent().apply {
                             val charDescrip: String =
                                 binding.characterName.text.toString() + "\n\n" +
                                         binding.characterDescription.text.toString()
-                                type = "text/plain"
-                                action = Intent.ACTION_SEND
-                                putExtra(Intent.EXTRA_TEXT, charDescrip)
-                            }
 
+                            // For sharing the image, we prepare it by this code
+                            // https://sagar-r-kothari.github.io/android/kotlin/2020/07/20/Android-Share-Intent-Image.html
+
+                            // Get Bitmap from your imageView
+                            val bitmap = binding.characterImage.drawable.toBitmap()
+                            // Compress image
+                            val bytes = ByteArrayOutputStream()
+                            bitmap.compress(Bitmap.CompressFormat.JPEG, 100, bytes)
+                            // Save image & get path of it
+                            // insertImage() is deprecated but it still works here
+                            val path = MediaStore.Images.Media.insertImage(requireContext().contentResolver, bitmap, "tempimage", null)
+                            // Get URI of saved image
+                            val uri = Uri.parse(path)
+
+
+                            type = "image/*"
+                            action = Intent.ACTION_SEND
+                            putExtra(Intent.EXTRA_STREAM, uri)
+                            putExtra(Intent.EXTRA_TEXT, charDescrip)
+                        }
+
+                        // shareIntent chooses the correct activity based on sendIntent
                         val shareIntent = Intent.createChooser(sendIntent, null)
                         startActivity(shareIntent)
                     }
